@@ -1,5 +1,5 @@
 
-"nfl_draft_prospects.csv"
+`nfl_draft_prospects.csv`
 |variable       |class     |description              |
 |:--------------|:---------|:------------------------|
 |year           |integer   |year of draft            |
@@ -27,7 +27,7 @@
 |grade          |double    |ESPN player grade        |
 |player_image   |character |player image             |
 
-"nfl_draft_profiles.csv"
+`nfl_draft_profiles.csv`
 |variable     |class     |description  
 |:------------|:---------|:--------------------------|
 |player_id    |character |unique player ID           |
