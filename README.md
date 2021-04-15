@@ -1,4 +1,10 @@
 
+## Note
+
+If you attempt to read in the .csv files in R with the commonly used `readr::read_csv` function, please use the parameter `guess_max = 13000` to avoid parsing errors (this has to do with how `readr` guesses column types using only the first 1000 rows). Alternatively, use the `read.csv` function which will handle this without intervention.
+
+## Data Dictionaries
+
 `nfl_draft_prospects.csv`
 
 |variable       |class     |description              |
