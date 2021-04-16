@@ -1,7 +1,9 @@
 
-## Note
+## Notes
 
 If you attempt to read in the .csv files in R with the commonly used `readr::read_csv` function, please use the parameter `guess_max = 13000` to avoid parsing errors (this has to do with how `readr` guesses column types using only the first 1000 rows). Alternatively, use the `read.csv` function which will handle this without intervention.
+
+If you are joining the datasets together, the value `player_id` is uniquely identified across all data. Be wary of `pos_abbr`, as the abbreviations sometimes (though rarely) differ across datasets. I have had no issues with `school`, `school_name`, and `school_abbr`, but `player_id` will always join the data correctly.
 
 ## Data Dictionaries
 
@@ -59,3 +61,21 @@ If you attempt to read in the .csv files in R with the commonly used `readr::rea
 |text2        |character |prospect analysis 2        |
 |text3        |character |prospect analysis 3        |
 |text4        |character |prospect analysis 4        |
+
+`college_stats.csv`
+
+|variable             |class     |description                |
+|:--------------------|:---------|:--------------------------|
+|player_id            |character |unique player ID           |
+|alt_player_id        |character |alternate player ID        |
+|player_name          |character |player name                |
+|pos_abbr             |character |position abbreviation      |
+|school               |character |school                     |
+|school_abbr          |character |school abbreviation        |
+|school_primary_color |character |school primary color       |
+|school_alt_color     |character |school alternate color     |
+|season               |integer   |college season             |
+|statistic            |character |statistic                  |
+|value                |double    |statistic value            |
+|active               |logical   |active player?             |
+|all_star             |logical   |all star in college?       |
