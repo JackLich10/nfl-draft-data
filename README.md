@@ -67,7 +67,6 @@ If you are joining the datasets together, the value `player_id` is uniquely iden
 |variable     |class     |description                                                                                                                            |
 |:------------|:---------|:--------------------------------------------------------------------------------------------------------------------------------------|
 |season       |integer   |college season                                                                                                                         |
-|player_id    |character |unique player ID                                                                                                                       |
 |guid         |character |guid                                                                                                                                   |
 |player_name  |character |player name                                                                                                                            |
 |age          |double    |current age                                                                                                                            |
