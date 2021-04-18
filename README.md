@@ -11,7 +11,9 @@ If you are joining in ESPN college QBR statistics from `college_qbr.csv`, join b
 
 ## Data Dictionaries
 
+
 `nfl_draft_prospects.csv`
+
 
 Information on previous NFL draft prospects dating back to 1967 (first year of the common draft). If the player has `NA` values for `pick`, `overall`, and `round`, it means he went undrafted or the draft has not occurred yet (for current year prospects).
 
@@ -42,7 +44,9 @@ Information on previous NFL draft prospects dating back to 1967 (first year of t
 |grade          |double    |ESPN player grade        |
 |player_image   |character |player image             |
 
+
 `nfl_draft_profiles.csv`
+
 
 Information on NFL draft prospects including pre-draft text analysis in columns `text*` for * in 1, 2, 3, 4.
 
@@ -69,7 +73,9 @@ Information on NFL draft prospects including pre-draft text analysis in columns 
 |text3        |character |prospect analysis 3        |
 |text4        |character |prospect analysis 4        |
 
+
 `college_qbr.csv`
+
 
 ESPN college QB QBR metrics for every quarterback in college football since 2004. Please join in this dataset using `guid` and `player_name`.
 
@@ -90,7 +96,9 @@ ESPN college QB QBR metrics for every quarterback in college football since 2004
 |raw_qbr      |double    |Raw Total QB Rating, which values QB on all play types on a 0-100 scale (not adjusted for opposing defenses faced)                     |
 |sack         |double    |Expected points added on sacks with low leverage plays down-weighted.                                                                  |
 
+
 `ids.csv`
+
 
 Information for joining a player's ESPN ID (commonly referred to as `player_id` in many datasets) with their ID in the `nflfastR` package. At this time, it only has data for QB's. Might add in receivers and running backs later.
 
@@ -100,7 +108,9 @@ Information for joining a player's ESPN ID (commonly referred to as `player_id` 
 |player_name          |character |player name                  |
 |nflfastR_id          |character |unique player ID in nflfastR |
 
+
 `college_stats.csv`
+
 
 NFL draft prospect counting statistics in college. Includes counting statistics like interceptions, tackles, receiving touchdowns, passing touchdowns, etc. by a player's college season.
 
