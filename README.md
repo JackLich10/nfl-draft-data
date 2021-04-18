@@ -5,6 +5,8 @@ If you attempt to read in the .csv files in R with the commonly used `readr::rea
 
 If you are joining the datasets together, the value `player_id` is uniquely identified across all data. Be wary of `pos_abbr`, as the abbreviations sometimes (though rarely) differ across datasets. I have had no issues with `school`, `school_name`, and `school_abbr`, but `player_id` will always join the data correctly.
 
+If you are joining in ESPN college QBR statistics from `college_qbr.csv`, join by `guid` and `player_name`.
+
 ## Data Dictionaries
 
 `nfl_draft_prospects.csv`
@@ -70,7 +72,6 @@ If you are joining the datasets together, the value `player_id` is uniquely iden
 |guid         |character |guid                                                                                                                                   |
 |player_name  |character |player name                                                                                                                            |
 |age          |double    |current age                                                                                                                            |
-|school_abbr  |character |school abbreviation                                                                                                                    |
 |total_qbr    |double    |Adjusted Total QB Rating, which values the QB on all play types on a 0-100 scale adjusted for the strength of opposing defenses faced. |
 |points_added |double    |Number of points contributed by a QB, accounting for QBR and how much he plays, above the level of an average quarterback.             |
 |qb_plays     |double    |Plays on which the QB has a non-zero expected points contribution. Includes most plays that are not handoffs.                          |
