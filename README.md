@@ -1,6 +1,8 @@
 
 ## Notes
 
+Please read the data dictionaries for descriptions of each dataset and descriptions of the variables present.
+
 If you attempt to read in the .csv files in R with the commonly used `readr::read_csv` function, please use the parameter `guess_max = 13000` to avoid parsing errors (this has to do with how `readr` guesses column types using only the first 1000 rows). Alternatively, use the `read.csv` function which will handle this without intervention.
 
 If you are joining the datasets together, the value `player_id` is uniquely identified across all data. Be wary of `pos_abbr`, as the abbreviations sometimes (though rarely) differ across datasets. I have had no issues with `school`, `school_name`, and `school_abbr`, but `player_id` will always join the data correctly.
@@ -10,6 +12,8 @@ If you are joining in ESPN college QBR statistics from `college_qbr.csv`, join b
 ## Data Dictionaries
 
 `nfl_draft_prospects.csv`
+
+Information on previous NFL draft prospects dating back to 1967 (first year of the common draft). If the player has `NA` values for `pick`, `overall`, and `round`, it means he went undrafted or the draft has not occurred yet (for current year prospects).
 
 |variable       |class     |description              |
 |:--------------|:---------|:------------------------|
@@ -38,8 +42,9 @@ If you are joining in ESPN college QBR statistics from `college_qbr.csv`, join b
 |grade          |double    |ESPN player grade        |
 |player_image   |character |player image             |
 
-
 `nfl_draft_profiles.csv`
+
+Information on NFL draft prospects including pre-draft text analysis in columns `text*` for * in 1, 2, 3, 4.
 
 |variable     |class     |description  
 |:------------|:---------|:--------------------------|
@@ -66,6 +71,8 @@ If you are joining in ESPN college QBR statistics from `college_qbr.csv`, join b
 
 `college_qbr.csv`
 
+ESPN college QB QBR metrics for every quarterback in college football since 2004. Please join in this dataset using `guid` and `player_name`.
+
 |variable     |class     |description                                                                                                                            |
 |:------------|:---------|:--------------------------------------------------------------------------------------------------------------------------------------|
 |season       |integer   |college season                                                                                                                         |
@@ -83,7 +90,19 @@ If you are joining in ESPN college QBR statistics from `college_qbr.csv`, join b
 |raw_qbr      |double    |Raw Total QB Rating, which values QB on all play types on a 0-100 scale (not adjusted for opposing defenses faced)                     |
 |sack         |double    |Expected points added on sacks with low leverage plays down-weighted.                                                                  |
 
+`ids.csv`
+
+Information for joining a player's ESPN ID (commonly referred to as `player_id` in many datasets) with their ID in the `nflfastR` package. At this time, it only has data for QB's. Might add in receivers and running backs later.
+
+|variable             |class     |description                  |
+|:--------------------|:---------|:----------------------------|
+|espn_id              |character |unique player ID from ESPN   |
+|player_name          |character |player name                  |
+|nflfastR_id          |character |unique player ID in nflfastR |
+
 `college_stats.csv`
+
+NFL draft prospect counting statistics in college. Includes counting statistics like interceptions, tackles, receiving touchdowns, passing touchdowns, etc. by a player's college season.
 
 |variable             |class     |description                |
 |:--------------------|:---------|:--------------------------|
