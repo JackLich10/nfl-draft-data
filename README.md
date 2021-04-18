@@ -62,6 +62,27 @@ If you are joining the datasets together, the value `player_id` is uniquely iden
 |text3        |character |prospect analysis 3        |
 |text4        |character |prospect analysis 4        |
 
+`college_qbr.csv`
+
+|variable     |class     |description                                                                                                                            |
+|:------------|:---------|:--------------------------------------------------------------------------------------------------------------------------------------|
+|season       |integer   |college season                                                                                                                         |
+|player_id    |character |unique player ID                                                                                                                       |
+|guid         |character |guid                                                                                                                                   |
+|player_name  |character |player name                                                                                                                            |
+|age          |double    |current age                                                                                                                            |
+|school_abbr  |character |school abbreviation                                                                                                                    |
+|total_qbr    |double    |Adjusted Total QB Rating, which values the QB on all play types on a 0-100 scale adjusted for the strength of opposing defenses faced. |
+|points_added |double    |Number of points contributed by a QB, accounting for QBR and how much he plays, above the level of an average quarterback.             |
+|qb_plays     |double    |Plays on which the QB has a non-zero expected points contribution. Includes most plays that are not handoffs.                          |
+|total_epa    |double    |Total expected points added with low leverage plays, according to ESPN Win Probability model, down-weighted.                           |
+|pass         |double    |Expected points added on pass attempts with low leverage plays down-weighted.                                                          |
+|run          |double    |Clutch-weighted expected points added through rushes                                                                                   |
+|exp_sack     |double    |Clutch-weighted expected points added (lost) from sacks (not fumbles that may occur because of sacks)                                  |
+|penalty      |double    |Expected points added on penalties with low leverage plays down-weighted.                                                              |
+|raw_qbr      |double    |Raw Total QB Rating, which values QB on all play types on a 0-100 scale (not adjusted for opposing defenses faced)                     |
+|sack         |double    |Expected points added on sacks with low leverage plays down-weighted.                                                                  |
+
 `college_stats.csv`
 
 |variable             |class     |description                |
